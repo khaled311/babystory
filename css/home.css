@@ -932,7 +932,7 @@ html[dir="ltr"] .navbar1 > ul > li:nth-child(11) {
   background-color: #EC1B8D;
   width: 166px;
   padding: 5px 11px;
-  z-index: 9;
+  z-index: 9999;
   -webkit-transform: translateX(50px);
           transform: translateX(50px);
   -webkit-transition: 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53);

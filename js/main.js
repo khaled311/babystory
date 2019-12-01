@@ -22,7 +22,7 @@ $(function() {
   $(".menuTriger").on("click", function() {
     $(".sideNav").toggleClass("open");
     $(".navover").toggleClass("open");
-    $("body").css("overflow", "hidden");
+    $("body, html").css("overflow-y", "hidden");
   });
 
   // Close Side Nav
@@ -31,7 +31,7 @@ $(function() {
       $(".menuTriger").fadeIn();
       $(".navover").removeClass("open");
       $(".sideNav").toggleClass("open");
-      $("body").css("overflow", "auto");
+      $("body, html").css("overflow-y", "auto");
     }
   });
 
@@ -58,7 +58,7 @@ $(function() {
       // autoplay: true,
       rtl: true,
       loop: true,
-      nav: true,  
+      nav: true,
       items: 5,
       // dots: false,
       margin: 12,
@@ -66,7 +66,7 @@ $(function() {
       responsive: {
         0: {
           items: 2,
-          stagePadding: -20,
+          stagePadding: -9,
           margin: 8
         },
         600: {
@@ -77,7 +77,7 @@ $(function() {
           dots: true
         },
         992: {
-          items: 4,
+          items: 4
         },
         1200: {
           items: 5
@@ -88,65 +88,40 @@ $(function() {
         "<i class='fas fa-chevron-left'></i>"
       ]
     });
-  })
+  });
 
-  $('.proTabs a').on('shown.bs.tab', function (e) {
+  $(".proTabs a").on("shown.bs.tab", function(e) {
     let $owl = $(".products-Tabs .owl-carousel");
-    $owl.trigger('refresh.owl.carousel');
-  })
-  // $(".products-Tabs .owl-carousel").owlCarousel({
-  //   // autoplay: true,
-  //   rtl: true,
-  //   loop: true,
-  //   nav: true,
-  //   items: 5,
-  //   dots: false,
-  //   margin: 12,
-  //   // smartSpeed: 1000,
-  //   responsive: {
-  //     0: {
-  //       items: 1
-  //     },
-  //     768: {
-  //       items: 3
-  //     },
-  //     992: {
-  //       items: 5
-  //     }
-  //   },
-  //   navText: [
-  //     "<span><i class='fas fa-chevron-right'></i></span>",
-  //     "<span><i class='fas fa-chevron-left'></i></span>"
-  //   ]
-  // });
+    $owl.trigger("refresh.owl.carousel");
+  });
 
   // My Slider inner Slider
-  if ($(window).width() >= 768 && $(window).width() <= 1200){
+  if ($(window).width() >= 768 && $(window).width() <= 1200) {
     $(".categories .content").addClass("owl-carousel");
     $(".categories .owl-carousel").owlCarousel({
-        // autoplay: true,
-        rtl: true,
-        loop: true,
-        items: 5,
-        dots: true,
-        margin: 12,
-        // smartSpeed: 1000,
-        responsive: {
-          0: {
-            items: 1
-          },
-          768: {
-            items: 3
-          },
-          992: {
-            items: 4
-          }
+      // autoplay: true,
+      rtl: true,
+      loop: true,
+      items: 5,
+      dots: true,
+      margin: 12,
+      // smartSpeed: 1000,
+      responsive: {
+        0: {
+          items: 1
         },
-        navText: [
-          "<span><i class='fas fa-chevron-right'></i></span>",
-          "<span><i class='fas fa-chevron-left'></i></span>"
-        ]
-      });
+        768: {
+          items: 3
+        },
+        992: {
+          items: 4
+        }
+      },
+      navText: [
+        "<span><i class='fas fa-chevron-right'></i></span>",
+        "<span><i class='fas fa-chevron-left'></i></span>"
+      ]
+    });
   }
 
   // Product Counting
@@ -183,7 +158,10 @@ $(function() {
 
   //footer accordion
   if ($(window).width() < 992) {
-    $(".foot-links button, .newsletter > button").attr("data-toggle", "collapse");
+    $(".foot-links button, .newsletter > button").attr(
+      "data-toggle",
+      "collapse"
+    );
   }
 
   $(".foot-links button, .newsletter > button").on("click", function() {
@@ -203,7 +181,7 @@ $(function() {
   });
 
   // Header Stars
-  for (let i = 0; i < 29; i++) {
+  for (let i = 0; i < 40; i++) {
     $("header .snow").append("<span></span>");
   }
 
@@ -228,43 +206,81 @@ $(function() {
   // Header Stars
 
   // Tabs
-  $('#myTabs a').click(function (e) {
-    e.preventDefault()
-    $(this).tab('show')
-  })
+  $("#myTabs a").click(function(e) {
+    e.preventDefault();
+    $(this).tab("show");
+  });
 
   try {
     // Map
     var x = 0;
     var locations = [
-        ['الرياض', 24.6764335,46.6721885, ++x],
-        ['العيينه', 24.5093321,44.3405598, ++x],
-        ['الدوادمي', 24.7093321,49.3405598, ++x],
-        ['الدمام', 24.1093321,40.3405598, ++x],
-        ['الرسّ', 22.5093321,44.3405598, ++x],
+      ["الرياض", 24.6764335, 46.6721885, ++x],
+      ["العيينه", 24.5093321, 44.3405598, ++x],
+      ["الدوادمي", 24.7093321, 49.3405598, ++x],
+      ["الدمام", 24.1093321, 40.3405598, ++x],
+      ["الرسّ", 22.5093321, 44.3405598, ++x]
     ];
-  
-    var map = new google.maps.Map(document.getElementById('map'), {
+
+    var map = new google.maps.Map(document.getElementById("map"), {
       zoom: 6,
-      center: new google.maps.LatLng(24.75,46.68),
+      center: new google.maps.LatLng(24.75, 46.68),
       mapTypeId: google.maps.MapTypeId.ROADMAP
     });
-  
-  
+
     var marker, i;
-  
+
     for (i = 0; i < locations.length; i++) {
       marker = new google.maps.Marker({
         position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-        icon: '../images/pin.png',
+        icon: "../images/pin.png",
         map: map
       });
     }
-  } catch (error) {
+  } catch (error) {}
+
+  // Tabs
+  $(".nav-tabs a").on("click", function(e) {
+    // console.log(e.clientX);
+    $(".nav-tabs").scrollLeft(e.clientX - 80);
+  });
+
+  // Header Background
+  function timeConvertor(time) {
+    var PM = time.match('PM') ? true : false
     
+    time = time.split(':')
+    var min = time[1]
+    
+    if (PM) {
+        var hour = 12 + parseInt(time[0],10)
+        var sec = time[2].replace('PM', '')
+    } else {
+        var hour = time[0]
+        var sec = time[2].replace('AM', '')       
+    }
+    
+    return hour;
+}
+  var currentTime = new Date().toLocaleTimeString();
+
+  console.log(new Date().getHours());
+  console.log(timeConvertor(currentTime));
+
+  if (timeConvertor(currentTime) >= 6 && timeConvertor(currentTime) < 17) {
+    $("header .shape").attr("src", "images/header-shape-day.png")
+  } else {
+    $("header .shape").attr("src", "images/header-shape.png")
   }
+
+  // Preloder
+  $(window).on("load", function() {
+    $("html").css("overflow-y", "auto");
+    $(".preloader").fadeOut(400, function() {
+      $(this).remove()
+    });
+  });
 
   // Animation On Scroll
   AOS.init();
-
 });

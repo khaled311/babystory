@@ -493,6 +493,13 @@ header .sahab {
   }
 }
 
+@media (max-width: 767px) {
+  header .sahab {
+    -webkit-animation: clouds 70s linear infinite;
+            animation: clouds 70s linear infinite;
+  }
+}
+
 @media (min-width: 992px) {
   header {
     background-position: center;
@@ -688,7 +695,7 @@ header .content2 {
 
 @media (max-width: 375px) {
   header .left {
-    top: calc(121% + 17px);
+    top: calc(121% + 16px);
   }
 }
 
@@ -1217,7 +1224,7 @@ html[dir="ltr"] .navbar1 > ul > li.drp:hover .dropDown {
 
 @media (max-width: 991px) {
   .main-slider {
-    margin-top: 56px;
+    margin-top: 55px;
   }
 }
 

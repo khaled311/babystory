@@ -66,7 +66,7 @@ $(function() {
       responsive: {
         0: {
           items: 2,
-          stagePadding: -9,
+          stagePadding: -8,
           margin: 8
         },
         600: {

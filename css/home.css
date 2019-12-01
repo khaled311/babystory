@@ -104,6 +104,24 @@ ul.res {
   }
 }
 
+@-webkit-keyframes clouds {
+  from {
+    background-position: 0 50%;
+  }
+  to {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes clouds {
+  from {
+    background-position: 0 50%;
+  }
+  to {
+    background-position: 100% 50%;
+  }
+}
+
 .preloader {
   position: fixed;
   top: 0;
@@ -447,16 +465,32 @@ header {
   overflow: hidden;
 }
 
+@media (max-width: 375px) {
+  header {
+    height: 200px;
+    background-size: cover;
+  }
+}
+
 header .sahab {
   background-image: url(../images/sa.png);
-  background-size: 100%;
-  background-position: center;
+  background-position: 0% 50%;
+  background-repeat: repeat-x;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  background-repeat: no-repeat;
+  width: 200%;
+  display: none;
+  -webkit-animation: clouds 200s linear infinite;
+          animation: clouds 200s linear infinite;
+}
+
+@media (min-width: 1400px) {
+  header .sahab {
+    -webkit-animation: clouds 300s linear infinite;
+            animation: clouds 300s linear infinite;
+  }
 }
 
 @media (min-width: 992px) {
@@ -506,6 +540,16 @@ header .content .shape {
   -webkit-transform: translateX(-50%);
   transform: translateX(-51%);
   z-index: -1;
+}
+
+@media (max-width: 375px) {
+  header .content .shape {
+    width: 495px;
+    height: 240px;
+    bottom: -119%;
+    -webkit-transform: translateX(-51.5%);
+            transform: translateX(-51.5%);
+  }
 }
 
 header .top {
@@ -616,12 +660,20 @@ header .content2 {
   }
 }
 
+@media (max-width: 375px) {
+  header .content2 .logo img {
+    width: 137px;
+    -webkit-transform: translateY(-38px);
+            transform: translateY(-38px);
+  }
+}
+
 @media (max-width: 991px) {
   header .left {
     position: absolute;
     top: calc(100% + 15px);
     width: 100%;
-    background-color: dodgerblue;
+    background-color: #6BA3C5;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -629,8 +681,14 @@ header .content2 {
         -ms-flex-pack: center;
             justify-content: center;
     padding: 10px 0;
-    -webkit-box-shadow: 200px 0 dodgerblue, -200px 0 dodgerblue;
-            box-shadow: 200px 0 dodgerblue, -200px 0 dodgerblue;
+    -webkit-box-shadow: 200px 0 #6BA3C5, -200px 0 #6BA3C5;
+            box-shadow: 200px 0 #6BA3C5, -200px 0 #6BA3C5;
+  }
+}
+
+@media (max-width: 375px) {
+  header .left {
+    top: calc(121% + 17px);
   }
 }
 
@@ -1989,7 +2047,7 @@ html[dir="ltr"] footer .footer-intro img {
 
 @media (max-width: 375px) {
   footer .footer-intro img {
-    width: 60px;
+    width: 71px;
   }
 }
 

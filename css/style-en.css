@@ -1,0 +1,201 @@
+body{
+    direction: ltr;
+}
+
+.up .right span:not(:last-child) {
+    margin-right: 40px;
+    margin-left: unset;
+}
+
+.up .right span i {
+    margin-right: 5px;
+    margin-left: unset;
+}
+
+.head .search button{
+    right: 10px;
+    left: unset;
+}
+
+.head .menu > div:not(:last-child) svg {
+    margin-right: 25px;
+    margin-left: unset;
+}
+
+.head .menu > div.user .drop{
+    left: -101%;
+    right: unset;
+}
+
+.navBar > ul > li i {
+    margin-left: 5px;
+    margin-right: unset;
+}
+
+.navBar > ul > li .drop{
+    width: 170px;
+    right: 50%;
+}
+
+.navBar > ul > li:not(:last-child) {
+    margin-right: 25px;
+    margin-left: unset;
+}
+
+.products .product .over button:not(:last-child) {
+    margin-right: 5px;
+    margin-left: unset;
+}
+
+.products .product{
+    margin-right: 17px;
+    margin-left: 0;
+}
+
+@media (min-width: 992px) {
+    .products .product:nth-of-type(4n){
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .products .product:nth-of-type(5n){
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .products .product:nth-of-type(4n){
+        margin-right: 17px;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 991px){
+    .products .product:nth-of-type(3n){
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 767px){
+    .products .product:nth-of-type(2n){
+        margin-right: 17px;
+        margin-left: unset;
+    }
+}
+
+@media (max-width: 600px){
+    .products .product:nth-of-type(2n){
+        margin-right: 0;
+    }
+
+    .products .product:nth-of-type(3n){
+        margin-right: 17px;
+        margin-left: 0;
+    }
+    .products .product{
+        width: 208px;
+    }
+}
+
+@include mob375{
+    .products .product:nth-of-type(3n){
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 375px){
+    .products .product:nth-of-type(3n){
+        margin-right: 0;
+    }
+}
+
+.products .product .details span.price {
+    margin-left: 8px;
+    margin-right: unset;
+}
+
+.news .row .form button{
+    right: 50px;
+    left: unset;
+}
+
+@media (max-width: 991px){
+    .news .row .form button {
+        right: 20px;
+        left: unset;
+    }
+}
+
+@media (min-width: 992px){
+    .news .row .form button {
+        right: 30px;
+        left: unset;
+    }
+}
+
+@media (min-width: 1200px){
+    .news .row .form button {
+        right: 50px;
+        left: unset;
+    }
+}
+
+
+.news .row .content .icon {
+    margin-right: 20px;
+    margin-left: unset;
+}
+
+@media (min-width: 767px){
+    .news .row .content .icon {
+        margin-right: 0px;
+    }
+}
+
+.news .row .social a:not(:last-child) {
+    margin-right: 10px;
+    margin-left: unset;
+}
+
+@media (min-width: 1200px){
+    footer .foot-links {
+        text-align: left;
+    }
+}
+
+footer .download .pics a:first-child {
+    margin-right: 5px;
+    margin-left: unset;
+}
+
+@media (min-width: 1200px){
+    footer .download {
+        margin-top: 0px;
+        text-align: left;
+    }
+}
+
+.end .content a img {
+    margin-left: 5px;
+    margin-right: unset;
+}
+
+.sideNav > ul > li i{
+    right: 13px;
+    left: unset;
+    transform: rotate(-90deg);
+}
+
+.sideNav{
+    left: -100%;
+    right: unset;
+}
+
+.sideNav.open{
+    left: 0;
+}
+
+.menuTriger{
+    left: 30px;
+    right: unset;
+}

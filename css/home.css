@@ -695,7 +695,7 @@ header .content2 {
 
 @media (max-width: 375px) {
   header .left {
-    top: calc(121% + 16px);
+    top: calc(121% + 15px);
   }
 }
 
@@ -1224,7 +1224,7 @@ html[dir="ltr"] .navbar1 > ul > li.drp:hover .dropDown {
 
 @media (max-width: 991px) {
   .main-slider {
-    margin-top: 55px;
+    margin-top: 54px;
   }
 }
 

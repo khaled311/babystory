@@ -56,27 +56,27 @@ ul.res {
 
 @font-face {
   font-family: "tj";
-  src: url("../fonts/Tajawal-Regular.ttf") format("ttf"), url("../fonts/Tajawal-Regular.woff") format("woff"), url("../fonts/Tajawal-Regular.woff2") format("woff2"), url("../fonts/Tajawal-Regular.eot") format("eot");
+  src: url("fonts/Tajawal-Regular.ttf") format("ttf"), url("fonts/Tajawal-Regular.woff") format("woff"), url("fonts/Tajawal-Regular.woff2") format("woff2"), url("fonts/Tajawal-Regular.eot") format("eot");
 }
 
 @font-face {
   font-family: "tjBold";
-  src: url("../fonts/Tajawal-Bold.ttf") format("ttf"), url("../fonts/Tajawal-Bold.woff") format("woff"), url("../fonts/Tajawal-Bold.woff2") format("woff2"), url("../fonts/Tajawal-Bold.eot") format("eot");
+  src: url("fonts/Tajawal-Bold.ttf") format("ttf"), url("fonts/Tajawal-Bold.woff") format("woff"), url("fonts/Tajawal-Bold.woff2") format("woff2"), url("fonts/Tajawal-Bold.eot") format("eot");
 }
 
 @font-face {
   font-family: "tjLight";
-  src: url("../fonts/Tajawal-Light.ttf") format("ttf"), url("../fonts/Tajawal-Light.woff") format("woff"), url("../fonts/Tajawal-Light.woff2") format("woff2"), url("../fonts/Tajawal-Light.eot") format("eot");
+  src: url("fonts/Tajawal-Light.ttf") format("ttf"), url("fonts/Tajawal-Light.woff") format("woff"), url("fonts/Tajawal-Light.woff2") format("woff2"), url("fonts/Tajawal-Light.eot") format("eot");
 }
 
 @font-face {
   font-family: "tjMd";
-  src: url("../fonts/Tajawal-medium.ttf") format("ttf"), url("../fonts/Tajawal-medium.woff") format("woff"), url("../fonts/Tajawal-medium.woff2") format("woff2"), url("../fonts/Tajawal-medium.eot") format("eot");
+  src: url("fonts/Tajawal-medium.ttf") format("ttf"), url("fonts/Tajawal-medium.woff") format("woff"), url("fonts/Tajawal-medium.woff2") format("woff2"), url("fonts/Tajawal-medium.eot") format("eot");
 }
 
 @font-face {
   font-family: "tjBlk";
-  src: url("../fonts/Tajawal-Black.ttf") format("ttf"), url("../fonts/Tajawal-Black.woff") format("woff"), url("../fonts/Tajawal-Black.woff2") format("woff2"), url("../fonts/Tajawal-Black.eot") format("eot");
+  src: url("fonts/Tajawal-Black.ttf") format("ttf"), url("fonts/Tajawal-Black.woff") format("woff"), url("fonts/Tajawal-Black.woff2") format("woff2"), url("fonts/Tajawal-Black.eot") format("eot");
 }
 
 @-webkit-keyframes puls {

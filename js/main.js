@@ -180,31 +180,6 @@ $(function() {
       .removeClass("trans");
   });
 
-  // Header Stars
-  for (let i = 0; i < 40; i++) {
-    $("header .snow").append("<span></span>");
-  }
-
-  [...document.querySelectorAll("header .snow span")].forEach(el => {
-    let dimensions = Math.floor(Math.random() * 3) + 3;
-    let poseX = Math.floor(Math.random() * 100);
-    let poseY = Math.floor(Math.random() * 100);
-    let transion = Math.random() + 0.6;
-    $(el).css({
-      width: dimensions,
-      height: dimensions,
-      display: "inline-block",
-      backgroundColor: "#FFF",
-      borderRadius: "50%",
-      position: "absolute",
-      left: poseX + "%",
-      top: poseY + "%",
-      transition: transion + "s",
-      animation: `puls ${transion}s infinite`
-    });
-  });
-  // Header Stars
-
   // Tabs
   $("#myTabs a").click(function(e) {
     e.preventDefault();
@@ -268,9 +243,43 @@ $(function() {
   console.log(timeConvertor(currentTime));
 
   if (timeConvertor(currentTime) >= 6 && timeConvertor(currentTime) < 17) {
-    $("header .shape").attr("src", "images/header-shape-day.png")
+    $("header .shape").attr("src", "images/header-shape-day.png");
+    let imageUrl = "../images/head-back-day.png";
+    $("header").css("background-image", 'url(' + imageUrl + ')');
+    $("header .sahab").css("display", "block");
+    let logo = "../images/logo-day.png";
+    $(".logo img").attr("src", logo);
   } else {
-    $("header .shape").attr("src", "images/header-shape.png")
+    let imageUrl = "../images/head-back-night.png";
+    $("header .shape").attr("src", "images/header-shape.png");
+    $("header").css("background-image", 'url(' + imageUrl + ')');
+    let logo = "../images/logo.png";
+    $(".logo img").attr("src", logo);
+
+    // Header Stars
+  for (let i = 0; i < 40; i++) {
+    $("header .snow").append("<span></span>");
+  }
+
+  [...document.querySelectorAll("header .snow span")].forEach(el => {
+    let dimensions = Math.floor(Math.random() * 3) + 3;
+    let poseX = Math.floor(Math.random() * 100);
+    let poseY = Math.floor(Math.random() * 100);
+    let transion = Math.random() + 0.6;
+    $(el).css({
+      width: dimensions,
+      height: dimensions,
+      display: "inline-block",
+      backgroundColor: "#FFF",
+      borderRadius: "50%",
+      position: "absolute",
+      left: poseX + "%",
+      top: poseY + "%",
+      transition: transion + "s",
+      animation: `puls ${transion}s infinite`
+    });
+  });
+  // Header Stars
   }
 
   // Preloder

@@ -244,18 +244,18 @@ $(function() {
 
   if (timeConvertor(currentTime) >= 6 && timeConvertor(currentTime) < 17) {
     $("header .shape").attr("src", "images/header-shape-day.png");
-    let imageUrl = "../images/head-back-day.png";
+    let imageUrl = "images/head-back-day.png";
     $("header").css("background-image", 'url(' + imageUrl + ')');
     $("header .sahab").css({
       display: "block"
     });
-    let logo = "../images/logo-day.png";
+    let logo = "images/logo-day.png";
     $(".logo img").attr("src", logo);
   } else {
-    let imageUrl = "../images/head-back-night.png";
+    let imageUrl = "images/head-back-night.png";
     $("header .shape").attr("src", "images/header-shape.png");
     $("header").css("background-image", 'url(' + imageUrl + ')');
-    let logo = "../images/logo.png";
+    let logo = "images/logo.png";
     $(".logo img").attr("src", logo);
 
     // Header Stars

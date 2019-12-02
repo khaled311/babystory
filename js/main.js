@@ -242,12 +242,22 @@ $(function() {
   console.log(new Date().getHours());
   console.log(timeConvertor(currentTime));
 
-  if (timeConvertor(currentTime) >= 05 && timeConvertor(currentTime) < 13) {
+  if (timeConvertor(currentTime) >= 5 && timeConvertor(currentTime) < 17) {
+    $("header .shape").attr("src", "images/header-shape-day.png");
+    let imageUrl = "images/head-back-day.png";
+    $("header").css("background-image", 'url(' + imageUrl + ')');
+    $("header .sahab").css({
+      display: "block"
+    });
+    let logo = "images/logo-day.png";
+    $(".logo img").attr("src", logo);
+  } else {
     let imageUrl = "images/head-back-night.png";
     $("header .shape").attr("src", "images/header-shape.png");
     $("header").css("background-image", 'url(' + imageUrl + ')');
     let logo = "images/logo.png";
     $(".logo img").attr("src", logo);
+    $("header .left").addClass(".night");
   
     // Header Stars
     for (let i = 0; i < 40; i++) {
@@ -273,15 +283,6 @@ $(function() {
       });
     });
     // Header Stars
-  } else {
-    $("header .shape").attr("src", "images/header-shape-day.png");
-    let imageUrl = "images/head-back-day.png";
-    $("header").css("background-image", 'url(' + imageUrl + ')');
-    $("header .sahab").css({
-      display: "block"
-    });
-    let logo = "images/logo-day.png";
-    $(".logo img").attr("src", logo);
   }
 
   // Preloder

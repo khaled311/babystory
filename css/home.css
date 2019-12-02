@@ -82,25 +82,25 @@ ul.res {
 
 @-webkit-keyframes puls {
   0% {
-    opacity: .8;
+    opacity: 1;
   }
   50% {
     opacity: .5;
   }
   100% {
-    opacity: .8;
+    opacity: 1;
   }
 }
 
 @keyframes puls {
   0% {
-    opacity: .8;
+    opacity: 1;
   }
   50% {
     opacity: .5;
   }
   100% {
-    opacity: .8;
+    opacity: 1;
   }
 }
 
@@ -109,11 +109,29 @@ ul.res {
     background-position: 0 50%;
   }
   to {
-    background-position: 100% 50%;
+    background-position: -100% 50%;
   }
 }
 
 @keyframes clouds {
+  from {
+    background-position: 0 50%;
+  }
+  to {
+    background-position: -100% 50%;
+  }
+}
+
+@-webkit-keyframes cloudsMob {
+  from {
+    background-position: 0 50%;
+  }
+  to {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes cloudsMob {
   from {
     background-position: 0 50%;
   }
@@ -482,21 +500,21 @@ header .sahab {
   left: 0;
   width: 200%;
   display: none;
-  -webkit-animation: clouds 200s linear infinite;
-          animation: clouds 200s linear infinite;
+  -webkit-animation: clouds 100s linear infinite;
+          animation: clouds 100s linear infinite;
 }
 
 @media (min-width: 1400px) {
   header .sahab {
-    -webkit-animation: clouds 300s linear infinite;
-            animation: clouds 300s linear infinite;
+    -webkit-animation: clouds 200s linear infinite;
+            animation: clouds 200s linear infinite;
   }
 }
 
 @media (max-width: 767px) {
   header .sahab {
-    -webkit-animation: clouds 70s linear infinite;
-            animation: clouds 70s linear infinite;
+    -webkit-animation: cloudsMob 40s linear infinite;
+            animation: cloudsMob 40s linear infinite;
   }
 }
 
@@ -699,6 +717,14 @@ header .content2 {
   }
 }
 
+@media (max-width: 991px) {
+  header .left.night {
+    background-color: #224d69;
+    -webkit-box-shadow: 200px 0 #224d69, -200px 0 #224d69;
+            box-shadow: 200px 0 #224d69, -200px 0 #224d69;
+  }
+}
+
 header .left .user-sec {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -816,6 +842,8 @@ header .left .search button {
   font-size: 14px;
   color: #FFF;
   overflow: hidden;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 html[dir="ltr"] header .left .search button {
@@ -832,25 +860,8 @@ header .left .search button i {
   transition: .3s;
 }
 
-header .left .search button i:last-child {
-  position: absolute;
-  top: -40%;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-
-header .left .search button:hover i:first-child {
-  -webkit-transform: scale(1.3);
-          transform: scale(1.3);
-  opacity: 0;
-  visibility: hidden;
-}
-
-header .left .search button:hover i:last-child {
-  top: 50%;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-          transform: translateX(-50%) translateY(-50%);
+header .left .search button:hover {
+  background-color: #65aa27;
 }
 
 @media (max-width: 991px) {
@@ -1009,8 +1020,6 @@ html[dir="ltr"] .navbar1 > ul > li:nth-child(11) {
   width: 166px;
   padding: 5px 11px;
   z-index: 9999;
-  -webkit-transform: translateX(50px);
-          transform: translateX(50px);
   -webkit-transition: 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53);
   transition: 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53);
   opacity: 0;
@@ -1020,8 +1029,6 @@ html[dir="ltr"] .navbar1 > ul > li:nth-child(11) {
 html[dir="ltr"] .navbar1 > ul > li.drp .dropDown {
   left: 0;
   right: unset;
-  -webkit-transform: translateX(-50px);
-          transform: translateX(-50px);
 }
 
 .navbar1 > ul > li.drp .dropDown ul li {
@@ -1078,15 +1085,8 @@ html[dir="ltr"] .navbar1 > ul > li.drp .dropDown {
 }
 
 .navbar1 > ul > li.drp:hover .dropDown {
-  -webkit-transform: translateX(0px);
-          transform: translateX(0px);
   opacity: 1;
   visibility: visible;
-}
-
-html[dir="ltr"] .navbar1 > ul > li.drp:hover .dropDown {
-  -webkit-transform: translateX(0px);
-          transform: translateX(0px);
 }
 
 .someLinks {
@@ -1358,6 +1358,12 @@ html[dir="ltr"] .navbar1 > ul > li.drp:hover .dropDown {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+
+@media (max-width: 375px) {
+  .categories .container {
+    padding: 0 3px;
+  }
 }
 
 @media (min-width: 992px) {

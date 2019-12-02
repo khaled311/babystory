@@ -60,9 +60,7 @@ $(function() {
       loop: true,
       nav: true,
       items: 5,
-      // dots: false,
       margin: 12,
-      // smartSpeed: 1000,
       responsive: {
         0: {
           items: 2,
@@ -257,7 +255,7 @@ $(function() {
     $("header").css("background-image", 'url(' + imageUrl + ')');
     let logo = "images/logo.png";
     $(".logo img").attr("src", logo);
-    $("header .left").addClass(".night");
+    $("header .left").addClass("night");
   
     // Header Stars
     for (let i = 0; i < 40; i++) {
